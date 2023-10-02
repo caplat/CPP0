@@ -14,21 +14,45 @@ Contact::~Contact( void ){
 void    Contact::init_contact(){
 
     std::cout << "First_name" << std::endl;
-    std::getline(std::cin, this->first_name);
-
+    this->first_name.clear();
+    this->last_name.clear();
+    this->nickname.clear();
+    this->phone_number.clear();
+    this->darkest_secret.clear();
+    while(this->first_name.empty()){
+        
+        std::getline(std::cin, this->first_name);
+        if(this->first_name.empty())
+            std::cout << "Vous ne pouvez laisser le champ vide, veuillez reessayer." << std::endl;
+    }
     std::cout << "Last_name" << std::endl;
-    std::getline(std::cin, this->last_name);
+    while(this->last_name.empty()){
 
+        std::getline(std::cin, this->last_name);
+        if(this->last_name.empty())
+            std::cout << "Vous ne pouvez laisser le champ vide, veuillez reessayer." << std::endl;
+    }
     std::cout << "Nickname" << std::endl;
-    std::getline(std::cin, this->nickname);
+    while(this->nickname.empty()){
 
+        std::getline(std::cin, this->nickname);
+        if(this->nickname.empty())
+            std::cout << "Vous ne pouvez laisser le champ vide, veuillez reessayer." << std::endl;
+    }
     std::cout << "Phone_number" << std::endl;
-    std::getline(std::cin, this->phone_number);
+    while(this->phone_number.empty()){
 
+        std::getline(std::cin, this->phone_number);
+        if(this->phone_number.empty())
+            std::cout << "Vous ne pouvez laisser le champ vide, veuillez reessayer." << std::endl;
+    }
     std::cout << "Darkest_secret" << std::endl;
-    std::getline(std::cin, this->darkest_secret);
+    while(this->darkest_secret.empty()){
 
-    std::cout << "Entrer ADD, SEARCH ou EXIT" << std::endl;
+        std::getline(std::cin, this->darkest_secret);
+        if(this->darkest_secret.empty())
+            std::cout << "Vous ne pouvez laisser le champ vide, veuillez reessayer." << std::endl;
+    }
 }
 
 std::string Contact::get_info(int nb){

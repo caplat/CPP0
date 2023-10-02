@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+// #include <string>
 #include "phonebook.hpp"
 #include "contact.hpp"
 
@@ -26,7 +26,6 @@ int main()
         }
         else if(commande == "SEARCH"){
             test = 0;
-        //    std::cout << "allo" << std::endl;
             instance.display_contact();
         }
         else if(commande == "EXIT"){
